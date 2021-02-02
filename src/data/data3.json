@@ -1,0 +1,58 @@
+[
+    {
+        "Content": {
+            "type": "BoxComponent",
+            "props": {
+                "borderSize": "2px"
+            },
+            "children": [
+                {
+                    "Content": {
+                        "type": "ModalComponent",
+                        "props": {
+                            "isOpen": true,
+                            "width": "500px",
+                            "height": "400px"
+                        },
+                        "children": [
+                            {
+                                "Content": {
+                                    "type": "H1Component",
+                                    "props": {
+                                        "text": "How did you like the app?"
+                                    }
+                                }
+                            },
+                            {
+                                "Content": {
+                                    "type": "ParagraphComponent",
+                                    "props": {
+                                        "text": "Please leave a review before you go."
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Content": {
+                        "type": "BoxComponent",
+                        "props": {
+                            "borderSize": "3px"
+                        },
+                        "children": [
+                            {
+                                "Content": {
+                                    "type": "H1Component",
+                                    "props": {
+                                        "text": "from box component "
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+]
