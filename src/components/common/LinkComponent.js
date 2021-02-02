@@ -2,11 +2,11 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleModal, selectIsModalOpen } from './../../slices/commonSlice';
 
-export const LinkComponent = ({text, url}) => {
+export const LinkComponent = ({contentProps}) => {
     const isModalOpen = useSelector(selectIsModalOpen);
     const dispatch = useDispatch();
 
     return (
-        <a href={url} target="_blank" onClick={() => dispatch(toggleModal(!isModalOpen))}>{text}</a>
+        <a href={contentProps.url} target="_blank" rel="noreferrer" onClick={() => dispatch(toggleModal(!isModalOpen))}>{contentProps.text}</a>
     )
 }

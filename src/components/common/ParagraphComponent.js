@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const ParagraphComponent = ({text}) => {
+export const ParagraphComponent = ({contentProps}) => {
     return (
-        <p>{text}</p>
+        <p>{contentProps.text}</p>
     )
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 
-export const ListComponent = ({li}) => {
-    console.log(43, li)
+export const ListComponent = ({contentProps}) => {
     return (
         <ul>
             {
-                li.map((item, i) => 
+                contentProps.li.map((item, i) => 
                     <li key={i}>
                         {item}
                     </li>

@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const H2Component = ({text}) => {
+export const H2Component = ({contentProps}) => {
     return (
-        <h2>{text}</h2>
+        <h2>{contentProps.text}</h2>
     )
 }

@@ -15,29 +15,28 @@ export const makeParentComp = (data, index = 0) => {
 
     switch (data.Content.type) {
         case 'BoxComponent':
-            type = <BoxComponent key={index} childComp={data.Children} styleProps={data.Content.props} />;
+            type = <BoxComponent key={index} childComp={data.Children} contentProps={contentProps} />;
             break;
         case 'ModalComponent':
-            type = <ModalComponent key={index} isOpen={contentProps?.isOpen} width={contentProps?.width} 
-                height={contentProps?.height} childComp={data.Children} />;
+            type = <ModalComponent key={index} contentProps={contentProps} childComp={data.Children} />;
             break;
         case 'H1Component':
-            type = <H1Component key={index} text={contentProps.text} />;
+            type = <H1Component key={index} contentProps={contentProps} />;
             break;
         case 'H2Component':
-            type = <H2Component key={index} text={contentProps.text} />;
+            type = <H2Component key={index} contentProps={contentProps} />;
             break;
         case 'ListComponent':
-            type = <ListComponent key={index} li={contentProps.li} />;
+            type = <ListComponent key={index}  contentProps={contentProps} />;
             break;
         case 'ButtonComponent':
-            type = <ButtonComponent key={index} text={contentProps.text} />;
+            type = <ButtonComponent key={index} contentProps={contentProps} />;
             break;
         case 'ParagraphComponent':
-            type = <ParagraphComponent key={index} text={contentProps.text} />;
+            type = <ParagraphComponent key={index} contentProps={contentProps} />;
             break;
         case 'LinkComponent':
-            type = <LinkComponent key={index} text={contentProps.text} url={contentProps.url} />;
+            type = <LinkComponent key={index} contentProps={contentProps} />;
             break;
         default:
             type = <></>;

@@ -8,7 +8,7 @@ export const useChildComp = (childComp) => {
 
         let objects = Object.keys(childComp).map((c, i) => {
             let childObj = childComp[c]; //grandchildren
-            console.log(22, childObj)
+
             if (childObj.Content) {
                 let childParentComp = makeParentComp(childObj, i);
                 return childParentComp;

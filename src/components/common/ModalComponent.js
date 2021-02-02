@@ -5,16 +5,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectIsModalOpen, toggleModal } from './../../slices/commonSlice';
 import { useChildComp } from './../../hooks/useChildComp';
 
-export const ModalComponent = ({childComp, isOpen, width, height}) => {
+export const ModalComponent = ({childComp, contentProps}) => {
     const isModalOpen = useSelector(selectIsModalOpen);
     const dispatch = useDispatch();
     let childComponent = useChildComp(childComp);
 
     useEffect(() => {
-        if (isOpen) {
-            dispatch(toggleModal(isOpen));
+        if (contentProps.isOpen) {
+            dispatch(toggleModal(contentProps.isOpen));
         }
-    }, [isOpen])
+    }, [contentProps.isOpen, dispatch])
 
     const customStyles = {
         content : {
@@ -24,8 +24,8 @@ export const ModalComponent = ({childComp, isOpen, width, height}) => {
           bottom                : 'auto',
           marginRight           : '-50%',
           transform             : 'translate(-50%, -50%)',
-          width: `${width}`,
-          height: `${height}`
+          width: `${contentProps.width}`,
+          height: `${contentProps.height}`
         },
         overlay: {
             position: 'fixed',
